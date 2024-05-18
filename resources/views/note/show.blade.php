@@ -19,5 +19,10 @@
                 {{ $note->note }}
             </div>
         </div>
+
+        <div class="mt-8">
+            <a href="{{ route('note.index') }}" class="px-4 py-2 text-white bg-gray-500 rounded hover:bg-gray-600">Back
+                home</a>
+        </div>
     </div>
 @endsection

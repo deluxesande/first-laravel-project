@@ -9,6 +9,13 @@
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiase">
-        {{ $slot }}
+        <div class="container mx-auto py-6">
+            @session('message')
+                <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6" role="alert">
+                    <p>{{ session('message') }}</p>
+                </div>
+            @endsession
+            {{ $slot }}
+        </div>
     </body>
 </html>
